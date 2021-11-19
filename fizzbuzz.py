@@ -2,7 +2,7 @@ prompt_game = True
 while prompt_game:
     input_range = input("Enter a number to play FizzBuzz\n")
     if input_range.isdigit():
-        game_range = range(int(input_range) + 1)
+        game_range = range(int(input_range) + 1) #added 1 to make value inclusive
         for n in game_range:
             if n % 3 == 0 and n % 5 == 0:
                 n = "FizzBuzz"
