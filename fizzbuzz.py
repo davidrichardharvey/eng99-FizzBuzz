@@ -7,14 +7,12 @@
 
 fizzbuzz_game = True
 
-while fizzbuzz_game <100:
+while fizzbuzz_game in range(1, 100):
     fizzbuzz_game = input("Enter a number from 1 up to 100\n")
     if fizzbuzz_game.isdigit():
         fizzbuzz_game = int(fizzbuzz_game)
-        if fizzbuzz_game == 100:
+        if fizzbuzz_game >= 100:
             break
-        elif fizzbuzz_game == 0:
-            print("Please enter a different number")
         elif int(fizzbuzz_game) % 3 == 0 and int(fizzbuzz_game) % 5 == 0:
             print("FizzBuzz")
         elif int(fizzbuzz_game) % 3 ==0:
@@ -22,4 +20,6 @@ while fizzbuzz_game <100:
         elif int(fizzbuzz_game) % 5 ==0:
             print("Buzz")
         else:
-            print("keep guessing")
+            print("keep going")
+    else:
+        print("Please, enter a digit")
