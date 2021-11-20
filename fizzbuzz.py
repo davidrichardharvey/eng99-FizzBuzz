@@ -15,7 +15,6 @@ while start_game:
                 print(i)
     else:
         print("Enter a valid number that is between 1 - 100")
-        start_game = True
 
     start_over = input("Thank you for playing, type Y if you want to play again or any other key to stop\n")
     start_over = start_over.upper()
