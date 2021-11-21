@@ -1,4 +1,5 @@
 # Viggy's Fizz Buzz Game
+
 prompt_if_game_over = True
 while prompt_if_game_over:
     prompt_if_number = True
@@ -24,4 +25,4 @@ while prompt_if_game_over:
         prompt_if_game_over = False
 
 
-print("Hope you had a wonderfull experice see you back soon, bye")
+print("Hope you had a wonderfull experience see you back soon, bye")
