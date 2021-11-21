@@ -4,29 +4,9 @@
 # - If the number is divisible by both, print FizzBuzz instead
 # - Start the game by asking the user to provide the "up to" number
 
-
-
-# age = 0
-# while True:
-#     age = input("What is your age in years \n")
-#     if age.isdigit():
-#         age = int(age)
-#         if age <= 118:
-#             break
-#         else:
-#             print("Big doubt")
-#     print("Please provide your age in digits")
-#
-# print(age, type(age))
-# x = range(1, 101)
-# for i in x:
-#     if i % 3 == 0:
-#         print("Fizz")
-#     elif i % 5 == 0:
-#         print("Buzz")
-#         print(i)
 num = 0
-while num <= 99:
+limit = int(input("Enter maximum boundary \n"))
+while num <= limit - 1:
     num += 1
     if num % 3 == 0 and num % 5 == 0:
         print("FizzBuzz")
@@ -36,9 +16,3 @@ while num <= 99:
         print("Buzz")
     else:
         print(num)
-
-
-# for number in number:
-#     square = number ** 2
-#     print(square)
-# print(range(5))
