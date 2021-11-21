@@ -34,7 +34,8 @@ while num <= 99:
         print("Fizz")
     elif num % 5 == 0:
         print("Buzz")
-    print(num)
+    else:
+        print(num)
 
 
 # for number in number:
