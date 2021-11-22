@@ -8,13 +8,13 @@ Start the game by asking the user to provide the "up to" number
 """
 
 
-class Fizzbuzz:
+class Fizzbuzz_Game:
     def __repr__(self):
         return "A class for playing the game Fizzbuzz"
     def __init__(self):
         pass
 
-    def fizzbuzz_game(self, max_num):
+    def fizzbuzz(self, max_num):
         """
         Game that prints from 1 to a given number.
         If the number is divisible by 3, print Fizz instead
@@ -32,7 +32,7 @@ class Fizzbuzz:
                 output = i
             print(output)
 
-    def get_user_Input(self):
+    def get_upper_limit(self):
         """
         Gets the user to enter a number to act as the upper limit in the Fizzbuzz game
         Checks if it is valid
@@ -55,18 +55,30 @@ class Fizzbuzz:
             break
         return max_num
 
+    def play_again(self):
+        '''
+        Asks the user if they want to play again
+        if not, then the code returns false, otherwise no return is necessary
+        '''
+        play_again = input("Do you wish to play again? y/n ")
+        play_again.lower()
+        # if first conditional is false, second isn't checked, so second cannot generate an empty list error if the
+        # length is indeed 0
+        if len(play_again) > 0 and play_again[0] == "n":
+            print("Thank you for playing, the game has now ended")
+            return False
+
 
 # Gets user input, runs game, checks if user wants to play again (if the answer isn't a no, then it runs again)
 while True:
     # Running game
-    game = Fizzbuzz()
-    max_num = game.get_user_Input()
-    game.fizzbuzz_game(max_num)
+    game = Fizzbuzz_Game()
+    # Gets the upper limit for the user's game
+    max_num = game.get_upper_limit()
+    # Executes fizzbuzz portion of game
+    game.fizzbuzz(max_num)
     # Does the user want to replay?
-    play_again = input("Do you wish to play again? y/n ")
-    play_again.lower()
-    # if first conditional is false, second isn't checked, so second cannot generate an empty list error if the
-    # length is indeed 0
-    if len(play_again) > 0 and play_again[0] == "n":
-        print("Thank you for playing, the game has now ended")
+    # if not, game ends, other responses starts a new game
+    play_again = game.play_again()
+    if play_again == False:
         break
