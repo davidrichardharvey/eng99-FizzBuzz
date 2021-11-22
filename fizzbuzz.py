@@ -23,3 +23,4 @@ while fizzbuzz_game in range(1, 100):
             print("keep going")
     else:
         print("Please, enter a digit")
+
