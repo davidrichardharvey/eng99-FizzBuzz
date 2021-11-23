@@ -15,7 +15,9 @@ class FizzBuzz:
             num = input("Please enter a valid number: ")
             self.is_valid_number(num)
 
-        for i in range(1, int(num) + 1):
+        num = int(num) if int(num) < self.default else self.default
+
+        for i in range(1, num + 1):
             if i % 3 == 0 and i % 5 == 0:
                 print("FizzBuzz")
             elif i % 5 == 0:
