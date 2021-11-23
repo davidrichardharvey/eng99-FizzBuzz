@@ -1,4 +1,4 @@
-class Solution:
+class FizzBuzz:
     def __init__(self, default = 1000, is_valid = False):
         self.default = default
         self.is_valid = is_valid
