@@ -4,23 +4,20 @@
 # If the number is divisible by both, print FizzBuzz instead
 # Start the game by asking the user to provide the "up to" number
 
+class FizzBuzz_Game:
 
-fizzbuzz_game = True
-
-while fizzbuzz_game in range(1, 100):
-    fizzbuzz_game = input("Enter a number from 1 up to 100\n")
-    if fizzbuzz_game.isdigit():
-        fizzbuzz_game = int(fizzbuzz_game)
-        if fizzbuzz_game >= 100:
-            break
-        elif int(fizzbuzz_game) % 3 == 0 and int(fizzbuzz_game) % 5 == 0:
+    for user_input in range(1, 100):
+        user_input = int(input("Enter a number from 1 up to 100\n"))
+        user = int(user_input)
+        if user_input >= 100:
+            print("Enter a digit between 1-100")
+        elif int(user_input) % 3 == 0 and int(user_input) % 5 == 0:
             print("FizzBuzz")
-        elif int(fizzbuzz_game) % 3 ==0:
+        elif int(user_input) % 3 == 0:
             print("Fizz")
-        elif int(fizzbuzz_game) % 5 ==0:
+        elif int(user_input) % 5 == 0:
             print("Buzz")
         else:
             print("keep going")
     else:
         print("Please, enter a digit")
-
